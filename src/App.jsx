@@ -2,10 +2,15 @@ import './App.css'
 
 function App() {
   
-  function handleClick(){
+  const handleClick = () =>{
     alert('Button clicked');
-
   }
+
+  
+  const addToFive = (num) =>{
+    alert(num + 5);
+  }
+  
   return (
     <>
       <h3>Handle event</h3>
@@ -14,6 +19,9 @@ function App() {
 
       {/* way - 2 */}
       <button onClick={() => {alert('The button is clicked')}}>Click button</button>
+
+      {/* way - 3 (parameter diye)*/}
+      <button onClick={() => addToFive(4)}>Add to 5</button>
     </>
   )
 }
